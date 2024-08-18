@@ -7,8 +7,8 @@ G="\e[32m"
 SOURCE_DIRECTORY=/tmp/app-logs
 
 if[ -d $SOURCE_DIRECTORY ]
- tehn
-    echo -e "$G source directory already exists $N"
+ then
+     echo -e "$G source directory already exists $N"
  else
-    echo -e "$R $SOURCE_DIRECTORY desnot ecits $N"
+     echo -e "$R $SOURCE_DIRECTORY desnot ecits $N"
 fi
