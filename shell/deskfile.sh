@@ -4,7 +4,7 @@ N="\e[0m"
 R="\e[31m]"
 G="\e[32m"
 
-SOURCE_DIRECTORY=/tmp/app-logss
+SOURCE_DIRECTORY=/tmp/app-logs
 
 if [ -d $SOURCE_DIRECTORY ]
 then
