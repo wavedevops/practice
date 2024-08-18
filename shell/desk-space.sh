@@ -7,4 +7,4 @@ while IFS= read -r line
 do
     USAGE=$(echo $line)
 
-done <<<"$DISK_SPACE"
+done <<< $DISK_SPACE
