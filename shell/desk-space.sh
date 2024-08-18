@@ -5,6 +5,6 @@ DISK_THRESHOL="80"
 
 while IFS= read -r line
 do
-    USAGE=$(echo $line)
+  USAGE=$( echo $line )
 
 done <<< $DISK_SPACE
