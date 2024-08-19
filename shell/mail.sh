@@ -21,4 +21,4 @@ do
    fi
 done <<< $DISK_SPACE
 
-echo "message: $MESSAGE"
+echo -e "message: $MESSAGE"
