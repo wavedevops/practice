@@ -1,5 +1,10 @@
 #!/bin/bash
 
+N='/e[0m'
+R='/e[31m'
+G='/e[32m'
+Y='/e[33m'
+
 DISK_SPACE=$(df -hT | grep xfs)
 DISK_THRESHOL="10"
 
@@ -9,6 +14,6 @@ do
    FOLDER=$(echo $line | awk -F " " '{print $NF}')
    if [ $USAGE -ge $DISK_THRESHOL ]
    then
-       echo " $FOLDER is more than $DISK_THRESHOL , current usage is $USAGE"
+       echo -e " $Y $FOLDER $N is more than $DISK_THRESHOL , current usage is $G $USAGE $N"
    fi
 done <<< $DISK_SPACE
