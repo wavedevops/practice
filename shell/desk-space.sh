@@ -6,7 +6,7 @@ G='\e[32m'
 Y='\e[33m'
 
 DISK_SPACE=$(df -hT | grep xfs)
-DISK_THRESHOL="10"
+DISK_THRESHOL="70"
 
 while IFS= read -r line
 do
