@@ -23,4 +23,4 @@ done <<< $DISK_SPACE
 
 echo -e "message: $MESSAGE "
 
-echo "This is a test mail & Date $(date)" | mail -s "$MESSAGE" chandrahari296@gmail.com
+echo "$MESSAGE" | mail -s "Disk Usage Alert" chandrahari296@gmail.com
