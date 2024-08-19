@@ -1,9 +1,9 @@
 #!/bin/bash
 
-N='/e[0m'
-R='/e[31m'
-G='/e[32m'
-Y='/e[33m'
+N='\e[0m'
+R='\e[31m'
+G='\e[32m'
+Y='\e[33m'
 
 DISK_SPACE=$(df -hT | grep xfs)
 DISK_THRESHOL="10"
