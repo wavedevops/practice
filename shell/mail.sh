@@ -21,4 +21,6 @@ do
    fi
 done <<< $DISK_SPACE
 
-echo -e "message: $MESSAGE"
+echo -e "message: $MESSAGE "
+
+echo "This is a test mail & Date $(date)" | mail -s "$MESSAGE" chandrahari296@gmail.com
