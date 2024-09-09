@@ -1,20 +1,9 @@
 #### Project ####
-variable "project_name"{
-  type = string
-}
+variable "project_name"{}
 
-variable "environment"{
-  type = string
-}
+variable "environment"{}
 
-variable "common_tags" {
-  type    = map
-  default = {
-    Project     = "expense"
-    Environment = "dev"
-    Terraform   = "true"
-  }
-}
+variable "common_tags" {}
 
 #### vpc ####
 variable "vpc_tags" {
