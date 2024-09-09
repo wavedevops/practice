@@ -5,4 +5,5 @@ module "VPC" {
   project_name = var.project_name
   public_subnets_cidr = var.public_subnets_cidr
   vpc_cidr = var.vpc_cidr
+  common_tags = var.common_tags
 }
