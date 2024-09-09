@@ -5,9 +5,6 @@ resource "aws_vpc" "main" {
     var.vpc_tags,
     {
       Name = "${var.project_name}-${var.environment}"
-      Project     = "expense"
-      Environment = "dev"
-      Terraform   = "true"
     }
   )
 }
@@ -22,5 +19,3 @@ resource "aws_subnet" "public" {
     Name = "Main"
   }
 }
-
-###########
