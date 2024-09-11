@@ -20,7 +20,7 @@ resource "aws_subnet" "public" {
     var.common_tags,
     var.vpc_tags,
     {
-      Name = "${var.component}-${var.env}"
+      Name = "${var.component}-${var.env}-public"
     }
   )
 }
@@ -35,7 +35,7 @@ resource "aws_subnet" "private" {
     var.common_tags,
     var.vpc_tags,
     {
-      Name = "${var.component}-${var.env}"
+      Name = "${var.component}-${var.env}-private"
     }
   )
 }
@@ -50,7 +50,38 @@ resource "aws_subnet" "database" {
     var.common_tags,
     var.vpc_tags,
     {
-      Name = "${var.component}-${var.env}"
+      Name = "${var.component}-${var.env}-database"
+    }
+  )
+}
+
+resource "aws_internet_gateway" "igw" {
+  vpc_id = aws_vpc.main.id
+
+  tags = merge(
+    var.common_tags,
+    var.vpc_tags,
+    {
+      Name = "${var.component}-${var.env}-igw"
+    }
+  )
+}
+
+
+resource "aws_route_table" "public" {
+  vpc_id = aws_vpc.main.id
+  count = length(var.public_subnets)
+
+  route {
+    cidr_block = var.public_subnets[count.index]
+    gateway_id = aws_internet_gateway.igw.id
+  }
+
+  tags = merge(
+    var.common_tags,
+    var.vpc_tags,
+    {
+      Name = "${var.component}-${var.env}-public"
     }
   )
 }
