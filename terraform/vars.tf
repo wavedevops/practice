@@ -1,28 +1,9 @@
-#### Project ####
-variable "project_name"{}
-
-variable "environment"{}
-
-variable "common_tags" {}
-
-#### vpc ####
-variable "vpc_tags" {
-  type = map
-  default = {}
-}
 variable "vpc_cidr" {}
+variable "env" {}
+variable "component" {}
+variable "common_tags" {}
+variable "vpc_tags" { default = {} }
 variable "azs" {}
-variable "public_subnets_cidr" {}
-
-
-#variable "project_name" {
-#  default = "expense"
-#}
-
-#variable "common_tags" {
-#  default = {
-#    Project = "expense"
-#    Environment = "dev"
-#    Terraform = "true"
-#  }
-#}
+variable "public_subnets" {}
+variable "private_subnets" {}
+variable "database_subnets" {}

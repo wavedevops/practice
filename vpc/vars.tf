@@ -1,6 +1,8 @@
-variable "project_name" {}
-variable "azs" {}
-variable "public_subnets_cidr" {}
 variable "vpc_cidr" {}
-variable "environment" {}
+variable "env" {}
+variable "component" {}
 variable "common_tags" {}
+variable "azs" {}
+variable "public_subnets" {}
+variable "private_subnets" {}
+variable "database_subnets" {}

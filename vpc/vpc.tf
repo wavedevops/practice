@@ -1,9 +1,11 @@
-module "VPC" {
+module "vpc" {
   source = "../terraform"
-  azs    = var.azs
-  environment = var.environment
-  project_name = var.project_name
-  public_subnets_cidr = var.public_subnets_cidr
+  component = var.component
+  env = var.env
   vpc_cidr = var.vpc_cidr
   common_tags = var.common_tags
+  azs = var.azs
+  private_subnets = var.private_subnets
+  public_subnets = var.public_subnets
+  database_subnets = var.database_subnets
 }
