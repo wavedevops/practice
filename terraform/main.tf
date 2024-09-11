@@ -85,3 +85,39 @@ resource "aws_route_table" "public" {
     }
   )
 }
+
+resource "aws_route_table" "private" {
+  vpc_id = aws_vpc.main.id
+  count = length(var.private_subnets)
+
+#   route {
+#     cidr_block = var.private_subnets[count.index]
+#     gateway_id = aws_internet_gateway.igw.id
+#   }
+
+  tags = merge(
+    var.common_tags,
+    var.vpc_tags,
+    {
+      Name = "${var.component}-${var.env}-private"
+    }
+  )
+}
+
+resource "aws_route_table" "database" {
+  vpc_id = aws_vpc.main.id
+  count = length(var.database_subnets)
+
+#   route {
+#     cidr_block = var.database_subnets[count.index]
+#     gateway_id = aws_internet_gateway.igw.id
+#   }
+
+  tags = merge(
+    var.common_tags,
+    var.vpc_tags,
+    {
+      Name = "${var.component}-${var.env}-database"
+    }
+  )
+}
