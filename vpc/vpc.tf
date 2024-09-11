@@ -8,4 +8,6 @@ module "vpc" {
   private_subnets = var.private_subnets
   public_subnets = var.public_subnets
   database_subnets = var.database_subnets
+  default_vpc_id = var.default_vpc_id
+  default_vpc_cidr = var.default_vpc_cidr
 }

@@ -12,6 +12,7 @@ resource "aws_vpc" "main" {
 
 resource "aws_subnet" "public" {
   count = length(var.public_subnets)
+  map_public_ip_on_launch = true
   vpc_id            = aws_vpc.main.id
   cidr_block        = var.public_subnets[count.index]
   availability_zone = var.azs[count.index]
@@ -20,7 +21,7 @@ resource "aws_subnet" "public" {
     var.common_tags,
     var.vpc_tags,
     {
-      Name = "${var.component}-${var.env}-public"
+      Name = "${var.component}-${var.env}-public-${count.index + 1}"
     }
   )
 }
@@ -35,7 +36,7 @@ resource "aws_subnet" "private" {
     var.common_tags,
     var.vpc_tags,
     {
-      Name = "${var.component}-${var.env}-private"
+      Name = "${var.component}-${var.env}-private-${count.index + 1}"
     }
   )
 }
@@ -50,10 +51,27 @@ resource "aws_subnet" "database" {
     var.common_tags,
     var.vpc_tags,
     {
-      Name = "${var.component}-${var.env}-database"
+      Name = "${var.component}-${var.env}-database-${count.index + 1}"
     }
   )
 }
+
+##### database subnet group
+resource "aws_db_subnet_group" "default" {
+  name       = "${var.component}-${var.env}"
+  subnet_ids = aws_subnet.database[*].id
+
+  tags = merge(
+    var.common_tags,
+    var.vpc_tags,
+    {
+      Name = "${var.component}-${var.env}"
+    }
+  )
+}
+
+
+
 
 resource "aws_internet_gateway" "igw" {
   vpc_id = aws_vpc.main.id
