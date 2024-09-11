@@ -12,7 +12,8 @@
 #   default_vpc_cidr = var.default_vpc_cidr
 # }
 module "vpc" {
-  source =   "git::https://github.com/Chowdary-Hari/terraform.git"
+#   source =   "git::https://github.com/Chowdary-Hari/terraform.git"
+  source = "git::https://github.com/wavedevops/practice.git//terraform/vpc"
   component = var.component
   env = var.env
   vpc_cidr = var.vpc_cidr
