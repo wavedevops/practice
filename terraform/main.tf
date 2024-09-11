@@ -67,15 +67,31 @@ resource "aws_internet_gateway" "igw" {
   )
 }
 
+# resource "aws_eip" "eip" {
+#   domain   = "vpc"
+#   tags = merge(
+#     var.common_tags,
+#     var.vpc_tags,
+#     {
+#       Name = "${var.component}-${var.env}-eip"
+#     }
+#   )
+# }
+#
+# resource "aws_nat_gateway" "nat" {
+#   allocation_id = aws_eip.eip.id
+#   subnet_id     = aws_subnet.public[0].id
+#   tags = merge(
+#     var.common_tags,
+#     var.vpc_tags,
+#     {
+#       Name = "${var.component}-${var.env}-nat"
+#     }
+#   )
+# }
 
 resource "aws_route_table" "public" {
   vpc_id = aws_vpc.main.id
-  count = length(var.public_subnets)
-
-  route {
-    cidr_block = var.public_subnets[count.index]
-    gateway_id = aws_internet_gateway.igw.id
-  }
 
   tags = merge(
     var.common_tags,
@@ -88,12 +104,6 @@ resource "aws_route_table" "public" {
 
 resource "aws_route_table" "private" {
   vpc_id = aws_vpc.main.id
-  count = length(var.private_subnets)
-
-#   route {
-#     cidr_block = var.private_subnets[count.index]
-#     gateway_id = aws_internet_gateway.igw.id
-#   }
 
   tags = merge(
     var.common_tags,
@@ -106,12 +116,6 @@ resource "aws_route_table" "private" {
 
 resource "aws_route_table" "database" {
   vpc_id = aws_vpc.main.id
-  count = length(var.database_subnets)
-
-#   route {
-#     cidr_block = var.database_subnets[count.index]
-#     gateway_id = aws_internet_gateway.igw.id
-#   }
 
   tags = merge(
     var.common_tags,
