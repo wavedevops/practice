@@ -1,5 +1,5 @@
 # module "vpc" {
-#   source = "../terraform"
+#   source = "../terraform/vpc"
 #   component = var.component
 #   env = var.env
 #   vpc_cidr = var.vpc_cidr
