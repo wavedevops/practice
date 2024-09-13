@@ -3,7 +3,7 @@ variable "component" {}
 variable "common_tags" {}
 variable "vpc_tags" { default = {} }
 
-variable "ingress_rules" {
+variable "ingress_rules" { ## it means not create security inbound tropic then default
   type = list
   default = [
 #     {
