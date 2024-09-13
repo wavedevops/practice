@@ -1,32 +1,32 @@
 resource "aws_security_group" "sg" {
-  name        =   "${var.component}-${var.env}-sg"
-  description = "${var.component}-${var.env}-sg"
+  name        = "${var.component}-${var.env}-${var.sg_name}"
+  description = "SG for ${var.sg_name} Instances"
   vpc_id      = data.aws_ssm_parameter.vpc_id.value
 
-#   dynamic "" {
-#     for_each = ""
-#     content {}
-#   }
-#   egress {
-#     from_port        = 0
-#     to_port          = 0
-#     protocol         = "-1"
-#     cidr_blocks      = ["0.0.0.0/0"]
-#     ipv6_cidr_blocks = ["::/0"]
-#   }
-#   ingress {
-#     from_port        = 0
-#     to_port          = 0
-#     protocol         = "-1"
-#     cidr_blocks      = ["0.0.0.0/0"]
-#     ipv6_cidr_blocks = ["::/0"]
-#   }
-#
+  dynamic "ingress" {
+    for_each = var.ingress_rules
+    content {
+      from_port   = ingress.value["from_port"]
+      to_port     = ingress.value["to_port"]
+      protocol    = ingress.value["protocol"]
+      cidr_blocks = ingress.value["cidr_blocks"]
+    }
+  }
+
+  dynamic "egress" {
+    for_each = var.outbound_rules
+    content {
+      from_port   = egress.value["from_port"]
+      to_port     = egress.value["to_port"]
+      protocol    = egress.value["protocol"]
+      cidr_blocks = egress.value["cidr_blocks"]
+    }
+  }
   tags = merge(
-    var.vpc_tags,
     var.common_tags,
+    var.sg_tags,
     {
-      Name = "${var.component}-${var.env}-sg"
+      Name = "${var.component}-${var.env}-${var.sg_name}"
     }
   )
 }

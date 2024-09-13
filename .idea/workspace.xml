@@ -5,24 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="df331d03-c8ed-4b54-9937-d7e1dc36a1dd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/note.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/terraform/sg/data.tf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/terraform/sg/provider.tf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/terraform/sg/sg.tf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/terraform/sg/vars.tf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/terraform/vpc/outputs.tf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/sg/sg.tf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/vpc/Makefile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/vpc/inputs.tfvars" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/vpc/perrametter.tf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/vpc/state.tf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/vpc/vars.tf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vpc/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/test/sg/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vpc/inputs.tfvars" beforeDir="false" afterPath="$PROJECT_DIR$/test/sg/inputs.tfvars" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vpc/state.tf" beforeDir="false" afterPath="$PROJECT_DIR$/test/sg/state.tf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vpc/vars.tf" beforeDir="false" afterPath="$PROJECT_DIR$/test/sg/vars.tf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vpc/vpc.tf" beforeDir="false" afterPath="$PROJECT_DIR$/test/vpc/vpc.tf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/terraform/sg/sg.tf" beforeDir="false" afterPath="$PROJECT_DIR$/terraform/sg/sg.tf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/terraform/sg/vars.tf" beforeDir="false" afterPath="$PROJECT_DIR$/terraform/sg/vars.tf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/sg/inputs.tfvars" beforeDir="false" afterPath="$PROJECT_DIR$/test/sg/inputs.tfvars" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/sg/sg.tf" beforeDir="false" afterPath="$PROJECT_DIR$/test/sg/sg.tf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/vpc/vars.tf" beforeDir="false" afterPath="$PROJECT_DIR$/test/vpc/vars.tf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/vpc/vpc.tf" beforeDir="false" afterPath="$PROJECT_DIR$/test/vpc/vpc.tf" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -12,12 +12,6 @@ module "vpc" {
   default_vpc_cidr = var.default_vpc_cidr
 }
 
-module "sg" {
-  source      = "../../terraform/sg"
-  component   = var.component
-  env         = var.env
-  common_tags = var.common_tags
-}
 
 # module "vpc" {
 # #   source =   "git::https://github.com/Chowdary-Hari/terraform.git"
