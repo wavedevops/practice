@@ -102,7 +102,6 @@ resource "aws_security_group_rule" "backend_bastion" {
   security_group_id = module.backend.sg_id
 }
 
-
 resource "aws_security_group_rule" "backend_ansible" {
   type              = "ingress"
   from_port         = 22
