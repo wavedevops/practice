@@ -1,6 +1,6 @@
 resource "aws_security_group" "sg" {
   name        = "${var.component}-${var.env}-${var.sg_name}"
-  description = "SG for ${var.sg_name} Instances"
+  description = "SG for ${var.sg_name}-${var.env}-Instances"
   vpc_id      = var.vpc_id
 
   dynamic "ingress" {
