@@ -29,3 +29,4 @@ variable "outbound_rules" {
 
 variable "sg_tags" { default = {} }
 variable "sg_name" {}
+variable "vpc_id" {}

@@ -6,12 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="df331d03-c8ed-4b54-9937-d7e1dc36a1dd" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/terraform/sg/data.tf" beforeDir="false" afterPath="$PROJECT_DIR$/test/sg/data.tf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/terraform/sg/sg.tf" beforeDir="false" afterPath="$PROJECT_DIR$/terraform/sg/sg.tf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/terraform/sg/vars.tf" beforeDir="false" afterPath="$PROJECT_DIR$/terraform/sg/vars.tf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/sg/inputs.tfvars" beforeDir="false" afterPath="$PROJECT_DIR$/test/sg/inputs.tfvars" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/sg/sg.tf" beforeDir="false" afterPath="$PROJECT_DIR$/test/sg/sg.tf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/vpc/vars.tf" beforeDir="false" afterPath="$PROJECT_DIR$/test/vpc/vars.tf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/vpc/vpc.tf" beforeDir="false" afterPath="$PROJECT_DIR$/test/vpc/vpc.tf" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,6 +71,7 @@
       <recent name="C:\Users\chand\IdeaProjects\practice\terraform" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/test/sg" />
       <recent name="$PROJECT_DIR$/terraform/vpc" />
       <recent name="$PROJECT_DIR$/vpc" />
       <recent name="C:\Users\chand\IdeaProjects\practice" />
