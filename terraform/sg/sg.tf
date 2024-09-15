@@ -1,5 +1,5 @@
 resource "aws_security_group" "sg" {
-  name        = "${var.component}-${var.env}}"
+  name        = "${var.project}-${var.component}-${var.env}"
   description = "SG for ${var.component} ${var.env} Instances"
   vpc_id      = var.vpc_id
 
@@ -26,7 +26,7 @@ resource "aws_security_group" "sg" {
     var.common_tags,
     var.sg_tags,
     {
-      Name = "${var.component}-${var.env}"
+      Name = "${var.project}-${var.component}-${var.env}"
     }
   )
 }
