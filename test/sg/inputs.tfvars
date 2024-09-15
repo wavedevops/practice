@@ -1,5 +1,5 @@
 env       = "dev"
-component = "expence"
+project = "expence"
 common_tags = {
   Project     = "expense"
   Environment = "dev"

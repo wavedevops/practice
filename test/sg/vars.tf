@@ -1,3 +1,3 @@
 variable "env" {}
-variable "component" {}
+variable "project"{}
 variable "common_tags" {}

@@ -1,6 +1,6 @@
 resource "aws_security_group" "sg" {
-  name        = "${var.component}-${var.env}-${var.sg_name}"
-  description = "SG for ${var.sg_name}-${var.env}-Instances"
+  name        = "${var.component}-${var.env}}"
+  description = "SG for ${var.component} ${var.env} Instances"
   vpc_id      = var.vpc_id
 
   dynamic "ingress" {
@@ -26,7 +26,7 @@ resource "aws_security_group" "sg" {
     var.common_tags,
     var.sg_tags,
     {
-      Name = "${var.component}-${var.env}-${var.sg_name}"
+      Name = "${var.component}-${var.env}"
     }
   )
 }

@@ -1,46 +1,46 @@
 module "database" {
   source      = "../../terraform/sg"
-  component   = var.component
+  component   = database
   env         = var.env
   common_tags = var.common_tags
-  sg_name     = "database"
   vpc_id      = data.aws_ssm_parameter.vpc_id.value
+  project     = var.project
 }
 
 module "backend" {
   source      = "../../terraform/sg"
-  component   = var.component
+  component   = backend
   env         = var.env
   common_tags = var.common_tags
-  sg_name     = "backend"
   vpc_id      = data.aws_ssm_parameter.vpc_id.value
+  project     = var.project
 }
 
 module "frontend" {
   source      = "../../terraform/sg"
-  component   = var.component
+  component   = frontend
   env         = var.env
   common_tags = var.common_tags
-  sg_name     = "frontend"
   vpc_id      = data.aws_ssm_parameter.vpc_id.value
+  project     = var.project
 }
 
 module "bastion" {
   source      = "../../terraform/sg"
-  component   = var.component
+  component   = bastion
   env         = var.env
   common_tags = var.common_tags
-  sg_name     = "bastion"
   vpc_id      = data.aws_ssm_parameter.vpc_id.value
+  project     = var.project
 }
 
 module "ansible" {
   source      = "../../terraform/sg"
-  component   = var.component
+  component   = ansible
   env         = var.env
   common_tags = var.common_tags
-  sg_name     = "ansible"
   vpc_id      = data.aws_ssm_parameter.vpc_id.value
+  project     = var.project
 }
 
 
@@ -138,5 +138,6 @@ resource "aws_security_group_rule" "frontend_ansible" {
   source_security_group_id = module.ansible.sg_id
   security_group_id = module.frontend.sg_id
 }
+
 
 

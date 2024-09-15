@@ -1,6 +1,6 @@
 vpc_cidr  = "10.0.0.0/16"
 env       = "dev"
-component = "expence"
+project     = "expense"
 common_tags = {
   Project     = "expense"
   Environment = "dev"

@@ -2,6 +2,8 @@ variable "env" {}
 variable "component" {}
 variable "common_tags" {}
 variable "vpc_tags" { default = {} }
+variable "project"{}
+
 
 variable "ingress_rules" { ## it means not create security inbound tropic then default
   type = list
@@ -28,5 +30,4 @@ variable "outbound_rules" {
 }
 
 variable "sg_tags" { default = {} }
-variable "sg_name" {}
 variable "vpc_id" {}

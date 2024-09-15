@@ -5,7 +5,7 @@ resource "aws_vpc" "main" {
     var.common_tags,
     var.vpc_tags,
     {
-      Name = "${var.component}-${var.env}"
+      Name = "${var.project}-${var.env}"
     }
   )
 }
@@ -21,7 +21,7 @@ resource "aws_subnet" "public" {
     var.common_tags,
     var.vpc_tags,
     {
-      Name = "${var.component}-${var.env}-public-${count.index + 1}"
+      Name = "${var.project}-${var.env}-public-${count.index + 1}"
     }
   )
 }
@@ -36,7 +36,7 @@ resource "aws_subnet" "private" {
     var.common_tags,
     var.vpc_tags,
     {
-      Name = "${var.component}-${var.env}-private-${count.index + 1}"
+      Name = "${var.project}-${var.env}-private-${count.index + 1}"
     }
   )
 }
@@ -51,21 +51,21 @@ resource "aws_subnet" "database" {
     var.common_tags,
     var.vpc_tags,
     {
-      Name = "${var.component}-${var.env}-database-${count.index + 1}"
+      Name = "${var.project}-${var.env}-database-${count.index + 1}"
     }
   )
 }
 
 ##### database subnet group
 resource "aws_db_subnet_group" "default" {
-  name       = "${var.component}-${var.env}"
+  name       = "${var.project}-${var.env}"
   subnet_ids = aws_subnet.database[*].id
 
   tags = merge(
     var.common_tags,
     var.vpc_tags,
     {
-      Name = "${var.component}-${var.env}"
+      Name = "${var.project}-${var.env}"
     }
   )
 }
@@ -80,7 +80,7 @@ resource "aws_internet_gateway" "igw" {
     var.common_tags,
     var.vpc_tags,
     {
-      Name = "${var.component}-${var.env}-igw"
+      Name = "${var.project}-${var.env}-igw"
     }
   )
 }
@@ -91,7 +91,7 @@ resource "aws_internet_gateway" "igw" {
 #     var.common_tags,
 #     var.vpc_tags,
 #     {
-#       Name = "${var.component}-${var.env}-eip"
+#       Name = "${var.project}-${var.env}-eip"
 #     }
 #   )
 # }
@@ -103,7 +103,7 @@ resource "aws_internet_gateway" "igw" {
 #     var.common_tags,
 #     var.vpc_tags,
 #     {
-#       Name = "${var.component}-${var.env}-nat"
+#       Name = "${var.project}-${var.env}-nat"
 #     }
 #   )
 # }
@@ -115,7 +115,7 @@ resource "aws_route_table" "public" {
     var.common_tags,
     var.vpc_tags,
     {
-      Name = "${var.component}-${var.env}-public"
+      Name = "${var.project}-${var.env}-public"
     }
   )
 }
@@ -127,7 +127,7 @@ resource "aws_route_table" "private" {
     var.common_tags,
     var.vpc_tags,
     {
-      Name = "${var.component}-${var.env}-private"
+      Name = "${var.project}-${var.env}-private"
     }
   )
 }
@@ -139,7 +139,7 @@ resource "aws_route_table" "database" {
     var.common_tags,
     var.vpc_tags,
     {
-      Name = "${var.component}-${var.env}-database"
+      Name = "${var.project}-${var.env}-database"
     }
   )
 }

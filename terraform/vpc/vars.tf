@@ -1,6 +1,6 @@
 variable "vpc_cidr" {}
 variable "env" {}
-variable "component" {}
+variable "project"{}
 variable "common_tags" {}
 variable "vpc_tags" { default = {} }
 variable "azs" {}
