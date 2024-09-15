@@ -1,6 +1,6 @@
 module "database" {
   source      = "../../terraform/sg"
-  component   = database
+  component   = "database"
   env         = var.env
   common_tags = var.common_tags
   vpc_id      = data.aws_ssm_parameter.vpc_id.value
@@ -9,7 +9,7 @@ module "database" {
 
 module "backend" {
   source      = "../../terraform/sg"
-  component   = backend
+  component   = "backend"
   env         = var.env
   common_tags = var.common_tags
   vpc_id      = data.aws_ssm_parameter.vpc_id.value
@@ -18,7 +18,7 @@ module "backend" {
 
 module "frontend" {
   source      = "../../terraform/sg"
-  component   = frontend
+  component   = "frontend"
   env         = var.env
   common_tags = var.common_tags
   vpc_id      = data.aws_ssm_parameter.vpc_id.value
@@ -27,7 +27,7 @@ module "frontend" {
 
 module "bastion" {
   source      = "../../terraform/sg"
-  component   = bastion
+  component   = "bastion"
   env         = var.env
   common_tags = var.common_tags
   vpc_id      = data.aws_ssm_parameter.vpc_id.value
@@ -36,7 +36,7 @@ module "bastion" {
 
 module "ansible" {
   source      = "../../terraform/sg"
-  component   = ansible
+  component   = "ansible"
   env         = var.env
   common_tags = var.common_tags
   vpc_id      = data.aws_ssm_parameter.vpc_id.value
