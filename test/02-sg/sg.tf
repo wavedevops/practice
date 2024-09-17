@@ -1,5 +1,5 @@
 module "database" {
-  source      = "../../terraform/sg"
+  source      = "../../terraform/02.sg"
   component   = "database"
   env         = var.env
   common_tags = var.common_tags
@@ -8,7 +8,7 @@ module "database" {
 }
 
 module "backend" {
-  source      = "../../terraform/sg"
+  source      = "../../terraform/02.sg"
   component   = "backend"
   env         = var.env
   common_tags = var.common_tags
@@ -17,7 +17,7 @@ module "backend" {
 }
 
 module "frontend" {
-  source      = "../../terraform/sg"
+  source      = "../../terraform/02.sg"
   component   = "frontend"
   env         = var.env
   common_tags = var.common_tags
@@ -26,7 +26,7 @@ module "frontend" {
 }
 
 module "bastion" {
-  source      = "../../terraform/sg"
+  source      = "../../terraform/02.sg"
   component   = "bastion"
   env         = var.env
   common_tags = var.common_tags
@@ -35,7 +35,7 @@ module "bastion" {
 }
 
 module "ansible" {
-  source      = "../../terraform/sg"
+  source      = "../../terraform/02.sg"
   component   = "ansible"
   env         = var.env
   common_tags = var.common_tags

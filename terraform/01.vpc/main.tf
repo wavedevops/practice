@@ -57,7 +57,7 @@ resource "aws_subnet" "database" {
 }
 
 ##### database subnet group
-resource "aws_db_subnet_group" "default" {
+resource "aws_db_subnet_group" "db" {
   name       = "${var.project}-${var.env}"
   subnet_ids = aws_subnet.database[*].id
 

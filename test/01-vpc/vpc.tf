@@ -1,5 +1,5 @@
 module "vpc" {
-  source           = "../../terraform/vpc"
+  source           = "../../terraform/01.vpc"
   env              = var.env
   vpc_cidr         = var.vpc_cidr
   common_tags      = var.common_tags

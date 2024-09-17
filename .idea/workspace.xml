@@ -5,8 +5,44 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="df331d03-c8ed-4b54-9937-d7e1dc36a1dd" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/terraform/01.vpc/outputs.tf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/terraform/03.app/main.tf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/terraform/03.app/state.tf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/terraform/03.app/vars.tf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/terraform/04.rds/data.tf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/terraform/04.rds/main.tf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/terraform/04.rds/vars.tf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/01-vpc/perrametter.tf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/01-vpc/state.tf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/02-sg/Makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/03-app/Makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/03-app/app.tf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/03-app/data.tf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/03-app/inputs.tfvars" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/03-app/vars.tf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/sg/perrametter.tf" beforeDir="false" afterPath="$PROJECT_DIR$/test/sg/perrametter.tf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/terraform/sg/output.tf" beforeDir="false" afterPath="$PROJECT_DIR$/terraform/02.sg/output.tf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/terraform/sg/sg.tf" beforeDir="false" afterPath="$PROJECT_DIR$/terraform/02.sg/sg.tf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/terraform/sg/vars.tf" beforeDir="false" afterPath="$PROJECT_DIR$/terraform/02.sg/vars.tf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/terraform/vpc/data.tf" beforeDir="false" afterPath="$PROJECT_DIR$/terraform/01.vpc/data.tf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/terraform/vpc/main.tf" beforeDir="false" afterPath="$PROJECT_DIR$/terraform/01.vpc/main.tf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/terraform/vpc/outputs.tf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/terraform/vpc/peering.tf" beforeDir="false" afterPath="$PROJECT_DIR$/terraform/01.vpc/peering.tf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/terraform/vpc/provider.tf" beforeDir="false" afterPath="$PROJECT_DIR$/terraform/01.vpc/provider.tf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/terraform/vpc/vars.tf" beforeDir="false" afterPath="$PROJECT_DIR$/terraform/01.vpc/vars.tf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/sg/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/terraform/04.rds/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/sg/data.tf" beforeDir="false" afterPath="$PROJECT_DIR$/test/02-sg/data.tf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/sg/inputs.tfvars" beforeDir="false" afterPath="$PROJECT_DIR$/test/02-sg/inputs.tfvars" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/sg/perrametter.tf" beforeDir="false" afterPath="$PROJECT_DIR$/test/02-sg/perrametter.tf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/sg/sg.tf" beforeDir="false" afterPath="$PROJECT_DIR$/test/02-sg/sg.tf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/sg/state.tf" beforeDir="false" afterPath="$PROJECT_DIR$/test/02-sg/state.tf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/sg/vars.tf" beforeDir="false" afterPath="$PROJECT_DIR$/test/02-sg/vars.tf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/vpc/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/test/01-vpc/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/vpc/inputs.tfvars" beforeDir="false" afterPath="$PROJECT_DIR$/test/01-vpc/inputs.tfvars" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/vpc/perrametter.tf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/vpc/state.tf" beforeDir="false" afterPath="$PROJECT_DIR$/terraform/04.rds/state.tf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/vpc/vars.tf" beforeDir="false" afterPath="$PROJECT_DIR$/test/01-vpc/vars.tf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/vpc/vpc.tf" beforeDir="false" afterPath="$PROJECT_DIR$/test/01-vpc/vpc.tf" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,22 +87,23 @@
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/chowdary/IdeaProjects/practice/test/sg",
+    "last_opened_file_path": "/Users/chowdary/IdeaProjects/practice/terraform/04.rds",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/terraform/04.rds" />
+      <recent name="$PROJECT_DIR$/test/03-app" />
       <recent name="$PROJECT_DIR$/test/sg" />
       <recent name="$PROJECT_DIR$/terraform" />
       <recent name="C:\Users\chand\IdeaProjects\practice\vpc" />
-      <recent name="C:\Users\chand\IdeaProjects\practice\terraform" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/terraform/sg" />
