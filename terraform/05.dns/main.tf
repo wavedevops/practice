@@ -3,7 +3,7 @@ resource "cloudflare_record" "app" {
   name    = var.component
   content = var.dns_record
   type    = var.record_type
-  ttl     = 5
+  ttl     = 60
   proxied = false
 }
 
