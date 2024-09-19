@@ -4,6 +4,7 @@ data "aws_ami" "ami" {
   owners      = ["973714476881"]
 }
 
+
 data "aws_ssm_parameter" "public_subnet_id" {
   name = "/${var.project}/${var.env}/public_subnet_id"
 }
@@ -11,4 +12,12 @@ data "aws_ssm_parameter" "public_subnet_id" {
 
 data "aws_ssm_parameter" "bastion_sg" {
   name  = "/${var.project}/${var.env}/bastion_sg_id"
+}
+
+data "aws_ssm_parameter" "token" {
+  name = "api_token"
+}
+
+data "cloudflare_zone" "zone" {
+  name = "chowdary.cloud"
 }
