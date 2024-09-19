@@ -66,7 +66,7 @@ module "db" {
 module "record" {
   source = "../../terraform/05.dns"
   zone_id = data.cloudflare_zone.zone.id
-  component = "db"
+  component = "mysql"
   dns_record = module.db.db_instance_address
   record_type = "CNAME"
 }
