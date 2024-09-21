@@ -5,42 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="df331d03-c8ed-4b54-9937-d7e1dc36a1dd" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/terraform/05.dns/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/note.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/terraform/01.vpc/data.tf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/terraform/01.vpc/main.tf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/terraform/01.vpc/outputs.tf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/terraform/01.vpc/peering.tf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/terraform/01.vpc/provider.tf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/terraform/01.vpc/vars.tf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/terraform/02.sg/output.tf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/terraform/02.sg/sg.tf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/terraform/02.sg/vars.tf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/terraform/03.app/data.tf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/terraform/03.app/main.tf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/terraform/03.app/outputs.tf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/terraform/03.app/state.tf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/terraform/03.app/vars.tf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/01-vpc/Makefile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/01-vpc/inputs.tfvars" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/01-vpc/perrametter.tf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/01-vpc/state.tf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/01-vpc/vars.tf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/01-vpc/vpc.tf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/02-sg/Makefile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/02-sg/data.tf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/02-sg/inputs.tfvars" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/02-sg/perrametter.tf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/02-sg/sg.tf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/02-sg/state.tf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/02-sg/vars.tf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/03-app/Makefile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/03-app/app.tf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/03-app/data.tf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/03-app/expense.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/03-app/inputs.tfvars" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/03-app/state.tf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/03-app/vars.tf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/terraform/05.dns/data.tf" beforeDir="false" afterPath="$PROJECT_DIR$/terraform/05.dns/data.tf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/terraform/05.dns/main.tf" beforeDir="false" afterPath="$PROJECT_DIR$/terraform/05.dns/main.tf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/terraform/05.dns/state.tf" beforeDir="false" afterPath="$PROJECT_DIR$/terraform/05.dns/state.tf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/terraform/05.dns/vars.tf" beforeDir="false" afterPath="$PROJECT_DIR$/terraform/05.dns/vars.tf" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,33 +46,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;Shell Script.Unnamed.executor&quot;: &quot;Run&quot;,
-    &quot;Terraform.terraform get in 04.rds.executor&quot;: &quot;Run&quot;,
-    &quot;Terraform.terraform get in vpc.executor&quot;: &quot;Run&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/chowdary/IdeaProjects/practice/test/03-app&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Shell Script.Unnamed.executor": "Run",
+    "Terraform.terraform get in 04.rds.executor": "Run",
+    "Terraform.terraform get in vpc.executor": "Run",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/chowdary/IdeaProjects/practice/terraform/05.dns",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/terraform/05.dns" />
       <recent name="$PROJECT_DIR$/test/03-app" />
       <recent name="$PROJECT_DIR$/terraform/04.rds" />
       <recent name="$PROJECT_DIR$/test/sg" />
       <recent name="$PROJECT_DIR$/terraform" />
-      <recent name="C:\Users\chand\IdeaProjects\practice\vpc" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/terraform/sg" />
