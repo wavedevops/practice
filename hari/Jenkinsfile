@@ -1,0 +1,12 @@
+pipeline{
+    agent{
+        lable 'workstation'
+    }
+    stages{
+        stage ('build') {
+            steps{
+                echo "hello this is build"
+            }
+        }
+    }
+}
