@@ -13,22 +13,26 @@ echo Adding a User hari
 sudo useradd hari
 status_check
 
-echo Adding a Grroup
+echo Adding a Grroup devops
 sudo groupadd devops
 status_check
 
-echo create a file 
+echo create a file file.txt
 sudo touch file.txt
 status_check
 
-echo Assining user to group
+echo Assining hari user to devops group
 sudo usermod -aG devops hari
 status_check
 
-echo Change oner ship of file 
-sudo chmod hari file.txt 
+echo Change onership of file 
+sudo chown hari file.txt 
 status_check
 
 echo "Chande group of file"
 sudo grpmod devops file.txt
+status_check
+
+echo enable user permishions 
+chmod 741 file.txt
 status_check
