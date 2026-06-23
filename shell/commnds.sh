@@ -6,7 +6,6 @@ status_check() {
         sleep 2
     else
         echo -e "\e[31mFAILURE\e[0m"
-        exit 1
     fi
 }
 echo Adding a User hari
@@ -30,7 +29,7 @@ sudo chown hari file.txt
 status_check
 
 echo "Chande group of file"
-sudo grpmod devops file.txt
+sudo groupmod devops file.txt
 status_check
 
 echo enable user permishions 
