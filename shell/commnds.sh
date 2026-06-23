@@ -10,7 +10,7 @@ status_check() {
     fi
 }
 
-useradd hari
+sudo useradd hari
 status_check
 
 
