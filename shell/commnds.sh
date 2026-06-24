@@ -8,30 +8,18 @@ status_check() {
         echo -e "\e[31mFAILURE\e[0m"
     fi
 }
-echo Adding a User hari
-sudo useradd hari
+
+echo "present working directory"
+pwd
 status_check
 
-echo Adding a Grroup devops
-sudo groupadd devops
+
+echo "varible form other file"
+echo "my name is $name"
 status_check
 
-echo create a file file.txt
-sudo touch file.txt
+echo "commnd substute"
+echo "to day date is $(date)" 
 status_check
 
-echo Assining hari user to devops group
-sudo usermod -aG devops hari
-status_check
 
-echo Change onership of file 
-sudo chown hari file.txt 
-status_check
-
-echo "Chande group of file"
-sudo groupmod devops file.txt
-status_check
-
-echo enable user permishions 
-chmod 741 file.txt
-status_check
