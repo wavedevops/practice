@@ -9,6 +9,8 @@ status_check() {
     fi
 }
 
+read name 
+
 echo "present working directory"
 pwd
 status_check
