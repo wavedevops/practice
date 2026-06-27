@@ -1,7 +1,7 @@
 #!/bin/bash
 
-read -p "Please enter your name"
+read -p "Please enter your name:"
 
-echo "good evining $(read)"
+echo "good evining $read"
 
 
