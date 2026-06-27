@@ -13,5 +13,6 @@ if [[ "$course" == "DevOps" ]]; then
 elif [[ "$course" == "Python" ]]; then
     echo "This student is eligible for Python."
 else
-    echo "This student is not eligible for my institute."
+    echo \n "This student is not eligible for my institute."
+    echo \t "This student is not eligible for my institute."
 fi
