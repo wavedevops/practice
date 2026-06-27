@@ -1,6 +1,7 @@
 #!/bin/bash
 
-touch task.sh
+read -p "Please enter your name"
 
+echo "good evining $(read)"
 
 
