@@ -5,8 +5,8 @@ read name
 echo -e "\e[32mplease enter your age :\e[0m"
 read age
 echo -e "\e[32mplease enter your cource :\e[0m"
-read cource
-echo -e "\e[33mname is '$name' , age is '$age' , cource is '$cource'.\e[0m"
+read course
+echo -e "\e[33mname is '$name' , age is '$age' , cource is '$course'.\e[0m"
 
 if [[ "$course" == "DevOps" ]]; then
     echo "This student is eligible for DevOps."
