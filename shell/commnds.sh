@@ -5,6 +5,10 @@ g=\e[32m
 n=\e[0m
 
 status_check() {
+r=\e[31m
+g=\e[32m
+n=\e[0m
+
     if [ $? -eq 0 ]; then
         echo -e "$(g)SECCUSS$(n)"
     else
