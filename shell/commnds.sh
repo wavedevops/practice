@@ -28,7 +28,11 @@ echo "add a repo"
 mkdir /app
 status_check
 
-echo "Add repo "app" to devops group"
+echo "Add repo "app" to dev "group""
 chgrp dev /app
+status_check
+
+echo "Changing the owner to 'ramu' and group to 'dev' for /app..."
+chown dev:dev /app
 status_check
 
