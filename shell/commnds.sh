@@ -37,4 +37,3 @@ chown dev:dev /app
 status_check
 
 
-
