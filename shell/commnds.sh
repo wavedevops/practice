@@ -1,10 +1,10 @@
 #!bin/bash 
 
-r=`\e[31m`
-g=`\e[32m`
-n=`\e[0m`
+r=\e[31m
+g=\e[32m
+n=\e[0m
 
-status_check() {
+status_check(){
     if [ $? -eq 0 ]; then
         echo -e "$(g)SECCUSS$(n)"
     else
@@ -35,6 +35,7 @@ status_check
 echo "Changing the owner to 'ramu' and group to 'dev' for /app..."
 chown dev:dev /app
 status_check
+
 
 
 
