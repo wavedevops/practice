@@ -36,3 +36,4 @@ echo "Changing the owner to 'ramu' and group to 'dev' for /app..."
 chown dev:dev /app
 status_check
 
+
