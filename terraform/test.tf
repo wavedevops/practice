@@ -11,7 +11,7 @@ resource "null_resource" "main" {
 
   provisioner "remote-exec" {
     inline = [
-      "ansible-pull -i localhost, -U https://github.com/wavedevops/expense-ansible.git -e env=${var.env} expense.yml --tags=${var.component}"
+      "ansible-pull -i localhost, -U https://github.com/wavedevops/expense-ansible.git -e env=${var.env} expense.yml role_name=${var.component}"
     ]
   }
 }
