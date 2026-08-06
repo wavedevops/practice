@@ -1,28 +1,22 @@
-resource "null_resource" "main" {
-
-  connection {
-    type     = "ssh"
-    host     = "172.31.35.13"
-    user     = "ec2-user"
-    password = "DevOps321"
-    # Better practice:
-    # private_key = file("~/.ssh/id_rsa")
+variable "houses_data" {
+  default = {
+    house_1 = {
+      name = "raju"
+      age = 22
+      sex = "m"
+    }
+    house_2 = {
+      name = "john"
+      age = 21
+      sex = "m"
+    }
+    house_3 = {
+      name = "rani"
+      age = 32
+      sex = "f"
+    }
   }
-
-  provisioner "remote-exec" {
-    inline = [
-      "ansible-pull -i localhost, -U https://github.com/wavedevops/expense-ansible.git -e env=${var.env} -e role_name=${var.component} expense.yaml"
-    ]
-  }
 }
-
-variable "env" {
-  type    = string
-  default = "dev"
+output "data" {
+  value = var.houses_data.house_1["name"]
 }
-
-variable "component" {
-  type    = string
-  default = "frontend"
-}
-
