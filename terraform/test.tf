@@ -18,5 +18,5 @@ variable "houses_data" {
   }
 }
 output "data" {
-  value = var.houses_data.house_1["name"]
+  value = var.houses_data.house_1["name"]["age"]
 }
